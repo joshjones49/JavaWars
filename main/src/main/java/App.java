@@ -61,6 +61,28 @@ public class App extends JFrame {
         setContentPane(rootPanel);
 
         topBarPanel.add(titleLabel, BorderLayout.WEST);
+
+        // add JButtons to JPanel
+        buttonPanel.add(randomButton);
+        buttonPanel.add(resetButton);
+        buttonPanel.add(hintButton);
+        buttonPanel.add(fontComboBox);
+        buttonPanel.add(checkButton);
+        topBarPanel.add(buttonPanel, BorderLayout.EAST);
         rootPanel.add(topBarPanel, BorderLayout.NORTH);
+
+        // set attributes of problemArea
+        problemArea.setEditable(false);
+        problemArea.setLineWrap(true);
+        problemArea.setWrapStyleWord(true);
+
+        verticalSplit.setResizeWeight(0.34);
+        verticalSplit.setLeftComponent(problemScrollPane);
+
+        bottomSplit.setResizeWeight(0.75);
+        bottomSplit.setBottomComponent(resultScrollPane);
+        verticalSplit.setRightComponent(bottomSplit);
+
+        rootPanel.add(verticalSplit, BorderLayout.CENTER);
     }
 }
