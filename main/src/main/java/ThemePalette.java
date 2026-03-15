@@ -2,6 +2,104 @@ import java.awt.Color;
 import java.util.List;
 
 public class ThemePalette {
+    // class fields
+    private final String name;
+    private final Color panelBackground;
+    private final Color panelForeground;
+    private final Color surfaceBackground;
+    private final Color buttonBackground;
+    private final Color editorBackground;
+    private final Color editorForeground;
+    private final Color editorCaret;
+    private final Color keywordColor;
+    private final Color numberColor;
+    private final Color stringColor;
+    private final Color commentColor;
+
+    // constructor
+    public ThemePalette (
+            String name,
+            Color panelBackground,
+            Color panelForeground,
+            Color surfaceBackground,
+            Color buttonBackground,
+            Color editorBackground,
+            Color editorForeground,
+            Color editorCaret,
+            Color keywordColor,
+            Color numberColor,
+            Color stringColor,
+            Color commentColor
+    ) {
+        this.name = name;
+        this.panelBackground = panelBackground;
+        this.panelForeground = panelForeground;
+        this.surfaceBackground = surfaceBackground;
+        this.buttonBackground = buttonBackground;
+        this.editorBackground = editorBackground;
+        this.editorForeground = editorForeground;
+        this.editorCaret = editorCaret;
+        this.keywordColor = keywordColor;
+        this.numberColor = numberColor;
+        this.stringColor = stringColor;
+        this.commentColor = commentColor;
+    }
+
+    // list of valid colors for theme selection
+    public static List<ThemePalette> defaults() {
+        return List.of(COOL_BLUE, DARK, LIGHT, MATRIX);
+    }
+
+    // getters
+    public Color getPanelBackground() {
+        return panelBackground;
+    }
+
+    public Color getPanelForeground() {
+        return panelForeground;
+    }
+
+    public Color getSurfaceBackground() {
+        return surfaceBackground;
+    }
+
+    public Color getButtonBackground() {
+        return buttonBackground;
+    }
+
+    public Color getEditorBackground() {
+        return editorBackground;
+    }
+
+    public Color getEditorForeground() {
+        return editorForeground;
+    }
+
+    public Color getEditorCaret() {
+        return editorCaret;
+    }
+
+    public Color getKeywordColor() {
+        return keywordColor;
+    }
+
+    public Color getNumberColor() {
+        return numberColor;
+    }
+
+    public Color getStringColor() {
+        return stringColor;
+    }
+
+    public Color getCommentColor() {
+        return commentColor;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public static final ThemePalette DARK = new ThemePalette(
             "Dark",
             new Color(28, 28, 28),
@@ -61,102 +159,4 @@ public class ThemePalette {
             new Color(185, 255, 185),
             new Color(95, 200, 95)
     );
-
-    // class fields
-    private final String name;
-    private final Color panelBackground;
-    private final Color panelForeground;
-    private final Color surfaceBackground;
-    private final Color buttonBackground;
-    private final Color editorBackground;
-    private final Color editorForeground;
-    private final Color editorCaret;
-    private final Color keywordColor;
-    private final Color numberColor;
-    private final Color stringColor;
-    private final Color commentColor;
-
-    // constructor
-    public ThemePalette (
-            String name,
-            Color panelBackground,
-            Color panelForeground,
-            Color surfaceBackground,
-            Color buttonBackground,
-            Color editorBackground,
-            Color editorForeground,
-            Color editorCaret,
-            Color keywordColor,
-            Color numberColor,
-            Color stringColor,
-            Color commentColor
-    ) {
-        this.name = name;
-        this.panelBackground = panelBackground;
-        this.panelForeground = panelForeground;
-        this.surfaceBackground = surfaceBackground;
-        this.buttonBackground = buttonBackground;
-        this.editorBackground = editorBackground;
-        this.editorForeground = editorForeground;
-        this.editorCaret = editorCaret;
-        this.keywordColor = keywordColor;
-        this.numberColor = numberColor;
-        this.stringColor = stringColor;
-        this.commentColor = commentColor;
-    }
-
-    // list of valid colors for theme selection
-    public static List<ThemePalette> defaults() {
-        return List.of(COOL_BLUE, DARK,LIGHT, MATRIX);
-    }
-
-    // getters
-    public Color getPanelBackground() {
-        return panelBackground;
-    }
-
-    public Color getPanelForeground() {
-        return panelForeground;
-    }
-
-    public Color getSurfaceBackground() {
-        return surfaceBackground;
-    }
-
-    public Color getButtonBackground() {
-        return buttonBackground;
-    }
-
-    public Color getEditorBackground() {
-        return editorBackground;
-    }
-
-    public Color getEditorForeground() {
-        return editorForeground;
-    }
-
-    public Color getEditorCaret() {
-        return editorCaret;
-    }
-
-    public Color getKeywordColor() {
-        return keywordColor;
-    }
-
-    public Color getNumberColor() {
-        return numberColor;
-    }
-
-    public Color getStringColor() {
-        return stringColor;
-    }
-
-    public Color getCommentColor() {
-        return commentColor;
-    }
-
-    @Override
-    public String toString() {
-        return name;
-    }
 }
