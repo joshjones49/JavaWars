@@ -107,7 +107,7 @@ public class ThemePalette {
 
     // list of valid colors for theme selection
     public static List<ThemePalette> defaults() {
-        return List.of(COOL_BLUE, DARK,LIGHT, MATRIX, BROWN);
+        return List.of(COOL_BLUE, DARK,LIGHT, MATRIX);
     }
 
     // getters
